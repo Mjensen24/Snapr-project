@@ -1,0 +1,24 @@
+.navigation-links_container-outer {
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.navigation-links_container-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 81.5%;
+}
+
+.navigation-links_container a {
+    background-color: grey;
+}
+
+.navigation-links {
+    padding-right: 12px;
+}

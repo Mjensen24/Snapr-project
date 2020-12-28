@@ -1,0 +1,17 @@
+.photo-stream_container {
+    width: 82%;
+
+
+}
+
+.photo-stream_container a {
+    padding: 0px;
+    margin: 0px;
+}
+
+.photo-stream_img {
+    height: 32.333%;
+    width: 32.333%;
+    padding: 2px;
+
+}
