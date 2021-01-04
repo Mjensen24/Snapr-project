@@ -1,8 +1,7 @@
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
 const PhotoPostInfo = ({ photo, user }) => {
-    const params = useParams();
-    console.log('test', user);
+    // const params = useParams();
     return (
         <div className='user-info_container'>
             <div className='user-info'>

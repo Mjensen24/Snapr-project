@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import ExplorePage from './components/ExpolorePage';
 import SinglePhoto from './components/SinglePhoto'
 import PostButton from "./components/Navigation/PostButton";
+import UserPhotoStream from "./components/UserPhotos";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path='/' exact={true}>
             <ExplorePage />
+          </Route>
+          <Route path='/user-photos'>
+            <UserPhotoStream />
           </Route>
         </Switch>
       )}

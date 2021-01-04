@@ -7,6 +7,7 @@ const photo = require("../../db/models/photo");
 
 const router = express.Router();
 
+// get all of the photos
 router.get('/', restoreUser, asyncHandler(async (req, res) => {
     const photos = await Photo.findAll();
     res.json({
@@ -14,8 +15,8 @@ router.get('/', restoreUser, asyncHandler(async (req, res) => {
     })
 }));
 
+// get a single photo from the homepage
 router.get('/:id', restoreUser, asyncHandler(async (req, res, next) => {
-    console.log(req.params)
     let photo = await Photo.findOne({
         where: {
             id: req.params.id
@@ -26,9 +27,29 @@ router.get('/:id', restoreUser, asyncHandler(async (req, res, next) => {
     })
 }));
 
+// get all photos for a single user
+router.get('/user-photos/:userId', restoreUser, asyncHandler(async (req, res, next) => {
+    const userPhotos = await Photo.findAll({
+        where: {
+            userId: req.params.userId
+        }
+    })
+    console.log('THIS IS HERE', userPhotos)
+    res.json({
+        userPhotos: userPhotos
+    })
+}))
 
-router.post('/', restoreUser, asyncHandler(async (req, res, next) => {
-
+// POST a new photo
+router.get('/post/:userId', restoreUser, asyncHandler(async (req, res, next) => {
+    console.log(res)
+    // const post = Photo.create({
+    //     title:,
+    //     subtitle: ,
+    //     imageLink: ,
+    //     userId: ,
+    //     albumId: ,
+    // })
 }));
 
 
